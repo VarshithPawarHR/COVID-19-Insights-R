@@ -9,7 +9,7 @@ library(scales) # Load the scales package for formatting labels
 #---------------------------------------------------------------------------------------
 
 #1. Read the CSV file
-df_India <- read.csv("C:/Users/varsh/OneDrive/Desktop/Covid_R/covid_19_india.csv")
+df_India <- read.csv('C:/Users/kamat/OneDrive/Desktop/covid_19_india.csv')
 class(df_India)
 str(df_India)
 colnames(df_India)
@@ -22,7 +22,6 @@ df_India%>%
   summarise(cases_sum=sum(Confirmed),cases_max=max(Confirmed))%>%
   arrange(desc(cases_sum))
 
-df_India[df_India$State.unionTerritory=="Bihar****",]
 
 
 
@@ -110,25 +109,26 @@ df_India[df_India$State.unionTerritory=="Karnataka",]
 df_India[df_India$State.unionTerritory=="Maharastra",]
 df_India[df_India$State.unionTerritory=="Kerala",]
 
-#9.BAR GRAPH FOR CONFIRMED , CURED , DEATHS
+#9.line  GRAPH FOR CONFIRMED , CURED , DEATHS
 
 
-confirm <- sum(df_India$Confirmed)
-cured <- sum(df_India$Cured)
-deaths <- sum(df_India$Deaths)
-active <- sum(df_India$Active)
 
-print(paste("Total Confirmed cases =", confirm))
-print(paste("Total Cured cases =", cured))
-print(paste("Total Active cases =", active))
-print(paste("Total Death cases =", deaths))
 
-barplot <- ggplot(data = data.frame(x = c('Confirmed','Cured','Deaths'), y = c(confirm, cured, deaths)), aes(x = x, y = y)) +
-  geom_bar(stat = "identity", fill = "steelblue") +
+# Create a data frame
+df <- data.frame(
+  x = c('Confirmed', 'Cured', 'Deaths'),
+  y = c(confirm, cured, deaths)
+)
+
+# Create a line graph
+lineplot <- ggplot(data = df, aes(x = x, y = y)) +
+  geom_line(aes(group = 1), color = "steelblue") +  # Use geom_line for a line graph
   scale_y_continuous(labels = comma) +  # Use the comma function to format labels
   labs(x = "", y = "") +
   theme_minimal()
 
-print(barplot)
+# Print the line graph
+print(lineplot)
 
-#-----------------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------
+   
