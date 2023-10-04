@@ -11,7 +11,7 @@ This repository contains an analysis of COVID-19 data to provide insights and un
 6. [Creating a Pie Chart for Confirmed, Cured, and Death Cases in India](#6-creating-a-pie-chart-for-confirmed-cured-and-death-cases-in-india)
 7. [Getting the Value Counts and Unique Values of Numeric Columns](#7-getting-the-value-counts-and-unique-values-of-numeric-columns)
 8. [Total Cases and Maximum Cases in Particular States](#8-total-cases-and-maximum-cases-in-particular-states)
-9. [Creating Bar Graphs for Confirmed, Cured, and Deaths](#9-creating-bar-graphs-for-confirmed-cured-deaths)
+9. [Creating line Graphs for Confirmed, Cured, and Deaths](#9-creating-line-graphs-for-confirmed-cured-deaths)
 
 Feel free to explore each section for a deeper understanding of the COVID-19 data analysis.
 
