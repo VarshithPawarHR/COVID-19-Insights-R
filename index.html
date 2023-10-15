@@ -107,6 +107,66 @@
             <img src="images/3.png" alt="output">
             
           </div> <br> <br> <br>
+          <p>
+            #4.identifying the columns with NAs <br>
+           colnames(df_India)[apply(df_India,2,anyNA)] <br>
+
+           unique(df_India$State.unionTerritory) <br>
+          
+          <p class="outputs">Output of 4:</p>
+          <div class="outputcontainer">
+            <img src="images/4.png" alt="output">
+            
+          </div> <br> <br> <br>
+          <p>
+            #5.Getting only numeric columns from the dataset <br>
+
+           # Select numeric columns <br>
+           num <- df_India %>% <br>
+            select_if(is.numeric) <br>
+           # Print the numeric columns <br>
+           print(num) <br>
+          </p>
+          <p class="outputs">Output of 5:</p>
+          <p>Please note here the entries are only from 1 to 28 of 18,110 entriesremaining has not been displayed .</p> <br>
+          <div class="outputcontainer">
+            <img src="images/5.png" alt="output">
+            
+          </div> <br> <br> <br>
+
+          <p>#6.Pie chart for confirmed , cured and death cases in India<br>
+
+            * Convert Date to Date format <br>
+            df_India$Date <- as.Date(df_India$Date, format = "%d/%m/%Y") <br>
+
+            
+            * Summarize the total cases <br>
+            confirm <- sum(df_India$Confirmed) <br>
+            cured <- sum(df_India$Cured) <br>
+            deaths <- sum(df_India$Deaths) <br>
+            
+            * Create a data frame for the pie chart <br>
+            df_value <- c(confirm, cured, deaths) <br>
+            df_key <- c("Confirmed", "Cured", "Deaths") <br>
+            
+            * Create a pie chart <br>
+            pie_chart <- ggplot(data = data.frame(df_key, df_value), aes(x = "", y = df_value, fill = df_key)) + <br>
+              geom_bar(stat = "identity", width = 1) +
+              coord_polar(theta = "y") + <br>
+              scale_fill_manual(values = c("Confirmed" = "lightblue", "Cured" = "orange", "Deaths" = "red")) +
+              labs(title = "COVID-19 Cases Distribution",
+                   fill = "Category",
+                   x = NULL,
+                   y = NULL) +
+              theme_void() +
+              theme(legend.position = "right") <br>
+            
+            print(pie_chart)</p>
+            <p class="outputs">Output of 6:</p>
+            <div class="outputcontainer">
+              <img src="images/6.png" alt="output">
+              
+            </div> <br> <br> <br>
 
 
 
