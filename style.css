@@ -71,11 +71,11 @@ ul {
   line-height: 2;
 }
 .headers {
-  color: rgb(73, 72, 72);
+  color: rgb(133, 130, 130);
   font-weight: 600;
 }
 .outputs {
-  color: rgb(73, 72, 72);
+  color: rgb(151, 145, 145);
   font-weight: 600;
   font-size: 28px;
 }

@@ -167,6 +167,28 @@
               <img src="images/6.png" alt="output">
               
             </div> <br> <br> <br>
+            <p>
+              
+             #7.To get the value of numeric columns and the unique value in the columns <br>
+
+              * Select numeric columns <br>
+              num_cols <- df_India %>%<br>
+              select_if(is.numeric) %>%<br>
+              colnames()<br>
+
+              * Iterate through numeric columns<br>
+               for (col in num_cols) {<br>
+              cat("Column: ", col, "\n")<br>
+              cat("Value counts of", col, ": ", sum(!is.na(df_India[[col]])), "\n")<br>
+                cat("Number of Unique Values in", col, ": ", n_distinct(df_India[[col]]), "\n\n")<br>
+                }<br>
+
+            </p>
+            <p class="outputs">Output of 7:</p>
+            <div class="outputcontainer">
+              <img src="images/7.png" alt="output">
+              
+            </div> <br> <br> <br>
 
 
 
