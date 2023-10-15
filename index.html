@@ -60,14 +60,56 @@
           </p>
           <p>
             #1. Read the CSV file <br>
-           df_India <- read.csv('C:/Users/kamat/OneDrive/Desktop/covid_19_india.csv') 
+           df_India <- read.csv('C:/Users/kamat/OneDrive/Desktop/covid_19_india.csv [FILE NAME / PATH]') 
             class(df_India) <br>
            str(df_India) <br>
             colnames(df_India) <br>
             summary(df_India) <br>
           </p>
+          <p class="outputs">Output of 1:</p>
+          <div class="outputcontainer">
+            <img src="images/1.png" alt="output">
+            
+          </div> <br> <br>
+          <p>
+            #2.total cases and max single day by states <br>
+            df_India%>% <br>
+            group_by(State.unionTerritory) %>% <br>
+            summarise(cases_sum=sum(Confirmed),cases_max=max(Confirmed))%>% <br>
+            arrange(desc(cases_sum))
 
-          
+          </p>
+          <p class="outputs">Output of 2:</p>
+          <div class="outputcontainer">
+            <img src="images/2 (2).png" alt="output">
+            
+          </div> <br> <br>
+          <p>
+            #3.plot graph OF  state VS mean of confirmed cases <br>
+
+           df_India %>% <br>
+           group_by(State.unionTerritory) %>% <br>
+            summarise(mean_conf = mean(Confirmed)) %>% <br>
+            ggplot(aes(x = State.unionTerritory, y = mean_conf, fill = State.unionTerritory)) + <br>
+           geom_bar(stat = "identity") + <br>
+           scale_x_discrete(guide = guide_axis(n.dodge = 13)) + <br>
+           theme_classic() + <br>
+            labs( <br>
+           x = "State/UnionTerritory", <br>
+            y = "Mean of Confirmed Cases", <br>
+           title = "Grouped by State/UnionTerritory with Summarise()" <br>
+           ) <br>
+
+
+          </p>
+          <p class="outputs">Output of 3:</p>
+          <div class="outputcontainer">
+            <img src="images/3.png" alt="output">
+            
+          </div> <br> <br>
+
+
+
         </div>
         
     </section>

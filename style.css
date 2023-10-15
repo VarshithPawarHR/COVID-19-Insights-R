@@ -74,3 +74,14 @@ ul {
   color: rgb(73, 72, 72);
   font-weight: 600;
 }
+.outputs {
+  color: rgb(73, 72, 72);
+  font-weight: 600;
+  font-size: 28px;
+}
+.outputcontainer img {
+  margin: 0 auto;
+  width: 1200px;
+  border: 3px solid rgb(192, 173, 173);
+  border-radius: 25px;
+}
