@@ -68,5 +68,9 @@ ul {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 20px;
-  line-height: 1.6;
+  line-height: 2;
+}
+.headers {
+  color: rgb(73, 72, 72);
+  font-weight: 600;
 }

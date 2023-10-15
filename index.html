@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid 19 Basic analysis</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <header>
@@ -24,8 +28,10 @@
       </div>
     </header>
     <section>
+
       <div class="container">
-        <p>This contains an analysis of COVID-19 data to provide insights and understanding of the pandemic. The analysis covers various aspects, including total cases, state-wise statistics, data exploration, visualization, and more. Follow the steps below to explore the findings: <br>
+        <h2 class="headers">Overview :</h2>
+        <p class="overview" style="font-size: 24px; padding-bottom: 0px; ">This contains an analysis of COVID-19 data to provide insights and understanding of the pandemic. The analysis covers various aspects, including total cases, state-wise statistics, data exploration, visualization, and more.Here we have basicvally used R programming language to perform operations. Follow the steps below to explore the findings: <br>
 
           Table of Contents:
           <ul>
@@ -41,7 +47,33 @@
             <li>9.Creating line Graphs for Confirmed, Cured, and Deaths</li>
           </ul>
           </p>
-      </div>
+          <h2 class="headers" >Codes:</h2>
+          <p>
+
+            # Load the required libraries <br>
+            library(dplyr) <br>
+            library("ggplot2") <br>
+            library(lubridate) <br>
+            library("ggpubr") <br>
+            library(scales) # Load the scales package for formatting labels
+            
+          </p>
+          <p>
+            #1. Read the CSV file <br>
+           df_India <- read.csv('C:/Users/kamat/OneDrive/Desktop/covid_19_india.csv') 
+            class(df_India) <br>
+           str(df_India) <br>
+            colnames(df_India) <br>
+            summary(df_India) <br>
+          </p>
+
+          
+        </div>
+        
     </section>
+    
+
+      
+
   </body>
 </html>
