@@ -84,4 +84,8 @@ ul {
   width: 1200px;
   border: 3px solid rgb(192, 173, 173);
   border-radius: 25px;
+  box-shadow: 0 2.4rem 4.8rem rgba(115, 112, 112, 0.404);
+
+  overflow: hidden;
+  transition: all 0.4s;
 }
