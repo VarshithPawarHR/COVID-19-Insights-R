@@ -48,4 +48,4 @@ The key takeaways from this analysis are as follows:
 
 9.Time-Series Visualization: The creation of line graphs for confirmed, cured, and death cases allowed for tracking the progression of COVID-19 over time.
 
-This comprehensive analysis offers valuable insights into the COVID-19 pandemic's impact in India. It serves as a valuable resource for data-driven decision-making, future research, and understanding the evolving dynamics of the pandemic. Exploring each section provides a more in-depth understanding of the findings and can be used as a foundation for further research and analysis.
+This comprehensive analysis offers valuable insights into the COVID-19 pandemic's impact in India. It serves as a valuable resource for data-driven decision-making, future research, and understanding the evolving dynamics of the pandemic. Exploring each section provides a more in-depth understanding of the findings and can be used as a foundation for further research and analysis..
