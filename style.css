@@ -12,8 +12,9 @@ nav {
   font-weight: 700;
   display: flex;
   margin: 20px;
-  justify-content: space-between;
+  justify-content: left;
   /* background-color: rgb(112, 153, 50); */
+  gap: 40px;
 }
 h1 {
   font-size: 50px;
@@ -105,3 +106,4 @@ ul {
   color: rgb(133, 130, 130);
   font-weight: 600;
 }
+.btn;
