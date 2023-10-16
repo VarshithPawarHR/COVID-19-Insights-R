@@ -218,6 +218,33 @@ df_India[df_India$State.unionTerritory=="Kerala",]<br>
               <img src="images/8.4.png" alt="output">
               
             </div> <br> <br> <br>
+            <p>
+              #9.Line   graph for confirmed for confirmed , cured , deaths  <br>
+             * Create a data frame <br>
+             df <- data.frame( <br>
+              x = c('Confirmed', 'Cured', 'Deaths'), <br>
+              y = c(confirm, cured, deaths) <br>
+             ) <br>
+
+             *  Create a line graph <br>
+              lineplot <- ggplot(data = df, aes(x = x, y = y)) + <br>
+             geom_line(aes(group = 1), color = "steelblue") +  # Use geom_line for a line graph <br>
+             scale_y_continuous(labels = comma) +  # Use the comma function to format labels <br>
+             labs(x = "", y = "") + <br>
+              theme_minimal() <br>
+
+             * Print the line graph <br>
+             print(lineplot) <br>
+            </p>
+            <p class="outputs">Output of 9 :</p>
+            
+            <div class="outputcontainer">
+              <img src="images/9.png" alt="output">
+              
+            </div> <br> <br> <br>
+
+            <p>-----------------------------------------------------------------------------------------------------------------------------</p>
+            
 
 
 
