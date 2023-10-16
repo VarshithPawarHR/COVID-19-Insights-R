@@ -89,3 +89,11 @@ ul {
   overflow: hidden;
   transition: all 0.4s;
 }
+#info-on-libraries {
+  color: rgb(133, 130, 130);
+  font-weight: 600;
+}
+#conclusion {
+  color: rgb(133, 130, 130);
+  font-weight: 600;
+}
