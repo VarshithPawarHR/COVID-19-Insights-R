@@ -14,10 +14,11 @@ nav {
   display: flex;
   margin: 20px;
   justify-content: right;
-  /* background-color: rgb(112, 153, 50); */
+
   gap: 20px;
+  position: fixed;
 }
-h1 {
+nav h1 {
   font-size: 50px;
   margin-bottom: 32px;
   line-height: 1;
@@ -112,7 +113,7 @@ ul {
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  color: white;
+  color: rgb(173, 173, 173);
   padding: 10px 30px;
   border-radius: 10px;
   display: inline-block;
